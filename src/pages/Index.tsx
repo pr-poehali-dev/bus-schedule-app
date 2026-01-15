@@ -19,19 +19,24 @@ interface BusStop {
 }
 
 const mockRoutes: BusRoute[] = [
-  { number: '12', name: 'Вокзал - Автостанция', type: 'bus', nextArrivals: ['2 мин', '15 мин', '28 мин'] },
-  { number: '5', name: 'Центр - Микрорайон', type: 'trolleybus', nextArrivals: ['5 мин', '20 мин', '35 мин'] },
-  { number: '3', name: 'Площадь - Парк', type: 'tram', nextArrivals: ['8 мин', '18 мин', '30 мин'] },
-  { number: '21', name: 'Рынок - Больница', type: 'bus', nextArrivals: ['3 мин', '12 мин', '25 мин'] },
-  { number: '7', name: 'Университет - Вокзал', type: 'bus', nextArrivals: ['6 мин', '19 мин', '32 мин'] },
-  { number: '14', name: 'Центр - Спортивный комплекс', type: 'trolleybus', nextArrivals: ['10 мин', '22 мин', '40 мин'] },
+  { number: '1', name: 'Вокзал - Красный Октябрь', type: 'bus', nextArrivals: ['3 мин', '18 мин', '33 мин'] },
+  { number: '2', name: 'Вокзал - Красный Профинтерн', type: 'bus', nextArrivals: ['5 мин', '20 мин', '35 мин'] },
+  { number: '3', name: 'Шёлковый Комбинат - Красный Профинтерн', type: 'bus', nextArrivals: ['7 мин', '22 мин', '37 мин'] },
+  { number: '4', name: 'Вокзал - Посёлок Первомайский', type: 'bus', nextArrivals: ['4 мин', '19 мин', '34 мин'] },
+  { number: '5', name: 'Автовокзал - Красный Октябрь', type: 'bus', nextArrivals: ['6 мин', '21 мин', '36 мин'] },
+  { number: '6', name: 'Вокзал - Посёлок Шёлковый Комбинат', type: 'bus', nextArrivals: ['8 мин', '23 мин', '38 мин'] },
+  { number: '7', name: 'Автовокзал - Городская Больница', type: 'bus', nextArrivals: ['10 мин', '25 мин', '40 мин'] },
+  { number: '101', name: 'Киржач - Владимир (межгород)', type: 'bus', nextArrivals: ['15 мин', '45 мин', '75 мин'] },
 ];
 
 const mockStops: BusStop[] = [
-  { id: '1', name: 'Центральная площадь', routes: ['12', '5', '7'], distance: '150 м' },
-  { id: '2', name: 'Вокзал', routes: ['12', '21', '7'], distance: '300 м' },
-  { id: '3', name: 'Парк Победы', routes: ['3', '14'], distance: '450 м' },
-  { id: '4', name: 'Университет', routes: ['7', '5'], distance: '800 м' },
+  { id: '1', name: 'Автовокзал', routes: ['1', '2', '4', '5', '6', '7'], distance: '200 м' },
+  { id: '2', name: 'Площадь 50-летия СССР', routes: ['1', '2', '3', '5'], distance: '350 м' },
+  { id: '3', name: 'Шёлковый Комбинат', routes: ['3', '6'], distance: '1.2 км' },
+  { id: '4', name: 'Красный Октябрь', routes: ['1', '5'], distance: '1.8 км' },
+  { id: '5', name: 'Красный Профинтерн', routes: ['2', '3'], distance: '2.1 км' },
+  { id: '6', name: 'Городская Больница', routes: ['7'], distance: '950 м' },
+  { id: '7', name: 'Посёлок Первомайский', routes: ['4'], distance: '3.5 км' },
 ];
 
 const Index = () => {
@@ -68,8 +73,8 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-2">Расписание автобусов</h1>
-          <p className="text-muted-foreground">Актуальная информация о транспорте в реальном времени</p>
+          <h1 className="text-4xl font-bold text-foreground mb-2">Расписание автобусов Киржача</h1>
+          <p className="text-muted-foreground">Актуальная информация о городском и пригородном транспорте</p>
         </div>
 
         <div className="mb-6 relative">
